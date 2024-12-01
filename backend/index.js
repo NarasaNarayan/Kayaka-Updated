@@ -12,7 +12,11 @@ const { type } = require('os');
 const { log } = require('console');
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:['https://kayaka-updated.vercel.app/'],
+    methods:['POST','GET'],
+    credentials:true
+}));
 // app.use(cors({ origin: 'http://localhost:3000' }));
 
 
